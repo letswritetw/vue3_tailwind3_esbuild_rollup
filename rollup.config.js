@@ -2,7 +2,8 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
-import buble from '@rollup/plugin-buble';
+import babelrc from 'babelrc-rollup';
+import { babel } from '@rollup/plugin-babel';
 import { terser } from "rollup-plugin-terser";
 
 export default {
@@ -10,12 +11,13 @@ export default {
   plugins: [
 		nodeResolve(),
 		commonjs(),
-		buble({
-			transforms: {
-				forOf: false
-			},
-			exclude: 'node_modules/**'
-		}),
+		babel(
+			babelrc({
+				addExternalHelpersPlugin: false,
+				exclude: 'node_modules/**',
+				runtimeHelpers: false
+			})
+		),
 		replace({
       'process.env.NODE_ENV': JSON.stringify('production'),
 			preventAssignment: true,
@@ -28,6 +30,6 @@ export default {
     file: 'dist/main.min.js',
     format: 'iife', // amd, cjs, esm, iife, umd
     sourcemap: false,
-		name: 'vueApp'
+		name: 'app'
   }
 };
