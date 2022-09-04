@@ -1,4 +1,4 @@
-# Vue3 + Tailwind CSS 3 + esbuild + rollup.js
+# Vue3 + Tailwind CSS 3 + dev: esbuild + build: rollup.js
 
 開發時用 esbuild，打包時用 rollup.js。
 
