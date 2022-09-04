@@ -2,6 +2,8 @@
   "name": "vue3_tailwind3_esbuild_rollup",
   "version": "1.0.0",
   "main": "src/main.js",
+  "repository": "https://github.com/letswritetw/vue3_tailwind3_esbuild_rollup.git",
+  "author": "Let's Write <letswritetw@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev-js": "./node_modules/.bin/esbuild ./src/main.js --bundle --sourcemap --outfile=./dist/main.min.js --watch",
