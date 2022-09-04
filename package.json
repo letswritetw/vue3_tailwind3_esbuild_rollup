@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev-js": "./node_modules/.bin/esbuild ./src/main.js --bundle --sourcemap --outfile=./dist/main.min.js --watch",
+    "dev-j": "node esbuild.config.js",
     "dev-tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.min.css --watch",
     "build-js": "rollup --config",
     "build-tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.min.css --minify",

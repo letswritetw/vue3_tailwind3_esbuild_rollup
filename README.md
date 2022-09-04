@@ -1,5 +1,7 @@
 # Vue3 + Tailwind CSS 3 + esbuild + rollup.js
 
+開發時用 esbuild，打包時用 rollup.js。
+
 ---
 
 ## Files
@@ -7,6 +9,7 @@
 **Config**
 
 - .babelrc：編譯成 ES5 的檔案。
+- esbuild.config.js：esbuild 的設定檔。
 - rollup.config.js：將 ./src/main.js 編譯成 ./dist/main.min.js 的設定檔。
 - tailwind.config.js：Tailwind CSS 的設定檔。
 
