@@ -27,8 +27,7 @@ export default {
   output: {
     file: 'dist/main.min.js',
     format: 'iife', // amd, cjs, esm, iife, umd
-    sourcemap: true,
-    sourcemapFile: 'dist/main.min.js.map',
-		name: 'MyModule'
+    sourcemap: false,
+		name: 'vueApp'
   }
 };
