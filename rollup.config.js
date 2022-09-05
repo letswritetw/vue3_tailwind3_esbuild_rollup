@@ -6,18 +6,19 @@ import babelrc from 'babelrc-rollup';
 import { babel } from '@rollup/plugin-babel';
 import { terser } from "rollup-plugin-terser";
 
+const babelrcOutput = babelrc({
+	addExternalHelpersPlugin: false,
+	exclude: 'node_modules/**',
+	runtimeHelpers: false
+});
+babelrcOutput.babelHelpers = 'bundled';
+
 export default {
   input: 'src/main.js',
   plugins: [
-		nodeResolve(),
+		nodeResolve({ browser: true }),
 		commonjs(),
-		babel(
-			babelrc({
-				addExternalHelpersPlugin: false,
-				exclude: 'node_modules/**',
-				runtimeHelpers: false
-			})
-		),
+		babel(babelrcOutput),
 		replace({
       'process.env.NODE_ENV': JSON.stringify('production'),
 			preventAssignment: true,
