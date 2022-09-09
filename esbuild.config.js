@@ -27,7 +27,7 @@ require('esbuild').build({
 }).then(result => {
   notifier.notify({
     title: 'esbuild 啟動！',
-    message: "祝您有個美好的一天。\n點擊本通知可以進到 Let's Write 官網。",
+    message: "Let's Write 祝您有個美好的一天。\n點擊本通知可以進到官網。",
     open: 'https://www.letswrite.tw/?utm_source=esbuild&utm_medium=node-notifier'
   });
 });

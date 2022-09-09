@@ -4,6 +4,8 @@ Vue 3 + Tailwind CSS v3。
 
 開發時用 esbuild，打包時用 rollup.js。
 
+本專案說明文章：[Let's Write](https://www.letswrite.tw/vue-tailwind-esbuild-rollup/)
+
 ---
 
 ## Files
