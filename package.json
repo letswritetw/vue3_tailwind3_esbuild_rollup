@@ -6,8 +6,7 @@
   "author": "Let's Write <letswritetw@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev-js": "./node_modules/.bin/esbuild ./src/main.js --bundle --sourcemap --outfile=./dist/main.min.js --watch",
-    "dev-j": "node esbuild.config.js",
+    "dev-js": "node esbuild.config.js",
     "dev-tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.min.css --watch",
     "build-js": "rollup --config",
     "build-tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.min.css --minify",
@@ -29,6 +28,7 @@
     "babel-preset-env": "^1.7.0",
     "babelrc-rollup": "^3.0.0",
     "esbuild": "^0.15.6",
+    "node-notifier": "^10.0.1",
     "rollup": "^2.79.0",
     "rollup-plugin-terser": "^7.0.2"
   }
