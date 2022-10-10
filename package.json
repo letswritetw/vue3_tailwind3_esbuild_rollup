@@ -10,7 +10,7 @@
     "dev-tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.min.css --watch",
     "build-js": "rollup --config",
     "build-tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.min.css --minify",
-    "remove-dist-js": "rm -f dist/main.min.js.map dist/main.min.js",
+    "remove-dist-js": "rm -R ./dist",
     "build": "yarn remove-dist-js && yarn build-js && yarn build-tailwind"
   },
   "dependencies": {
@@ -27,6 +27,7 @@
     "@rollup/plugin-replace": "^4.0.0",
     "babel-preset-env": "^1.7.0",
     "babelrc-rollup": "^3.0.0",
+    "dotenv": "^16.0.3",
     "esbuild": "^0.15.6",
     "node-notifier": "^10.0.1",
     "rollup": "^2.79.0",

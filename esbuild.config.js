@@ -1,4 +1,5 @@
 const notifier = require('node-notifier');
+require('dotenv').config();
 
 const errorNotifier = err => {
   notifier.notify({
@@ -9,10 +10,13 @@ const errorNotifier = err => {
   console.error('完整錯誤訊息：', err)
 };
 
+const entry = process.env.ENTRY.split(',');
 require('esbuild').build({
-  entryPoints: ['./src/main.js'],
-  outfile: './dist/main.min.js',
+  entryPoints: entry,
   bundle: true,
+  write: true,
+  outdir: './dist/',
+  outExtension: { '.js': '.min.js' },
   sourcemap: true,
   watch: {
     onRebuild(error, result) {
