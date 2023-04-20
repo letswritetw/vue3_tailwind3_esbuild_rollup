@@ -37,9 +37,9 @@ Vue 3 + Tailwind CSS v3。
 
 ## Develop
 
-JS：`npm run dev-js` 或 `yarn dev-js`。
+JS：`npm run js:dev` 或 `yarn js:dev`。
 
-Tailwind CSS：`npm run dev-tailwind` 或 `yarn dev-tailwind`。
+Tailwind CSS：`npm run css:dev` 或 `yarn css:dev`。
 
 ---
 
@@ -47,6 +47,6 @@ Tailwind CSS：`npm run dev-tailwind` 或 `yarn dev-tailwind`。
 
 JS + Tailwind CSS：`npm run build` 或 `yarn build`。
 
-JS：`npm run build-js` 或 `yarn build-js`。
+JS：`npm run js:build` 或 `yarn js:build`。
 
-Tailwind CSS：`npm run build-tailwind` 或 `yarn build-tailwind`。
+Tailwind CSS：`npm run css:build` 或 `yarn css:build`。

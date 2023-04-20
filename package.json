@@ -6,21 +6,16 @@
   "author": "Let's Write <letswritetw@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev-js": "node esbuild.config.js",
-    "dev-tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.min.css --watch",
-    "build-js": "rollup --config",
-    "build-tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.min.css --minify",
+    "js:dev": "node esbuild.config.js",
+    "css:dev": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.min.css --watch",
+    "js:build": "rollup --config",
+    "css:build": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.min.css --minify",
     "remove-dist-js": "rm -R ./dist",
-    "build": "yarn remove-dist-js && yarn build-js && yarn build-tailwind"
-  },
-  "dependencies": {
-    "pinia": "^2.0.21",
-    "tailwindcss": "^3.1.8",
-    "vue": "^3.2.38"
+    "build": "yarn remove-dist-js && yarn js:build && yarn css:build"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.13",
-    "@babel/preset-env": "^7.18.10",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^13.3.0",
@@ -28,9 +23,12 @@
     "babel-preset-env": "^1.7.0",
     "babelrc-rollup": "^3.0.0",
     "dotenv": "^16.0.3",
-    "esbuild": "^0.15.6",
+    "esbuild": "^0.15.18",
     "node-notifier": "^10.0.1",
+    "pinia": "^2.0.35",
     "rollup": "^2.79.0",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "tailwindcss": "^3.3.1",
+    "vue": "^3.2.47"
   }
 }
