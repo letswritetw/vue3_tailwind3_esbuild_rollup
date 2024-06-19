@@ -12,7 +12,7 @@ import { useDemoPinia } from './store/useDemoPinia';
 const App = {
   components: { useDemoComponent },
   setup() {
-    const msg = ref('Hello World');
+    const msg = ref('Hello World!');
 
     // demo Pinia
     const demoPinia = useDemoPinia();

@@ -6,7 +6,7 @@
   "author": "Let's Write <letswritetw@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "js:dev": "node esbuild.config.js",
+    "js:dev": "node esbuild.config.mjs",
     "css:dev": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.min.css --watch",
     "js:build": "rollup --config",
     "css:build": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.min.css --minify",
@@ -23,7 +23,7 @@
     "babel-preset-env": "^1.7.0",
     "babelrc-rollup": "^3.0.0",
     "dotenv": "^16.0.3",
-    "esbuild": "^0.15.18",
+    "esbuild": "^0.21.5",
     "node-notifier": "^10.0.1",
     "pinia": "^2.0.35",
     "rollup": "^2.79.0",
